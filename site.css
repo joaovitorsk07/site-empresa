@@ -1,0 +1,13 @@
+body{
+    background-color: white;
+    text-align: center;
+    
+}
+
+label{
+    display: block;
+}
+
+input{
+    margin-bottom: 50px;
+}
