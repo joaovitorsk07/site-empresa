@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Protec Home</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="site.js"></script>
 </head>
 <body>
     <h1>Protec Home</h1>
@@ -20,10 +22,28 @@
 </nav>
 
 <section>
-    <h3> Faça seu orçamento</h3>
-    <input type="submit" name="Faça Agora">
+    <fieldset>
+        <form  id="formdoc" action=orcamento.html>
+            <div>
+                <label for="nome">Digite seu nome completo</label>
+                <input type="text" name="nome" id="dgtnome" required>
+            </div>
+            <div>
+            <label for="email">Digite seu email</label>
+            <input type="email" name="Digite seu email" id="dgtemail" autocomplete="email"
+            required>
+        </div>
+        <div>
+            <label for="telefone">Digite seu telefone</label>
+            <input type="tel" id="dgtnumero" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxxx-xxxx">
+        </div>
+        <div>
+        <input type="submit" value="Faça Agora">
+         <input type="reset" value="Limpar">
+        </div>
+        </form>
+    </fieldset>
 </section>
-
 
 
 </body>
