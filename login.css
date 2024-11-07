@@ -2,33 +2,78 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #000000;
+    min-height: 100vh;
+    background-color: #0c192c;
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100vh;
+}
+.bolhas{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.bolhas span{
+    width: 30px;
+    height: 30px;
+    background: #720404;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #63010144,
+    0 0 50px #6a0202,
+    0 0 100px #600202;
+    animation: animar calc(150s / var(--i)) linear infinite;
+}
+
+@keyframes animar {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
+
+.bolhas span:nth-of-type(even){
+    background: #1302a9;
+    box-shadow: 0 0 0 10px #210167e8,
+    0 0 50px #0f0044,
+    0 0 100px #020257;
 }
 
 .login-container {
     display: flex;
     width: 1200px;
     height: 600px;
-    background-color: #1e1e1e;
     border-radius: 15px;
     overflow: hidden;
+    position: absolute;
 }
 
 .left-panel {
     width: 50%;
-    background: linear-gradient(135deg, #ffffff 0%, #161a20 100%);
+    background: linear-gradient(135deg, #100153 0%, #4d0101 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 
@@ -42,7 +87,7 @@ body {
 }
 
 h1 {
-    color: #fff;
+    color: #fffcfc;
     font-size: 24px;
     margin-bottom: 20px;
     font-weight: 600;

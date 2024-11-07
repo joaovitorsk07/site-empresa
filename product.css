@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+}
+body{
+    background-color: white;
+}
+
+header{
+    background: linear-gradient(rgb(1, 1, 84) 0%, rgb(102, 2, 2) 100%);
+color: white;
+display: flex;
+align-items: center;
+font-size: 50px;
+}
+
+.navegação{
+    display: flex;
+    list-style-type: none;
+    
+    
+}
